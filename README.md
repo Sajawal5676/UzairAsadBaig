@@ -1,10 +1,10 @@
-<!-- <img src="https://github.com/NumanAnees/NumanAnees/blob/master/hello.gif" alt = "hello" width="40px" height="40px"> -->
-<h1 align="center"> <img src="https://github.com/dheerajkotwani/dheerajkotwani/blob/master/hello.gif" alt="hello-gif"> <br >I'm <a href="https://www.linkedin.com/in/numananees/">Uzair Asad Baig</a>👨‍💻</h1>
+<!-- <img src="https://github.com/UzairAsadBaig/UzairAsadBaig/blob/master/hello.gif" alt = "hello" width="40px" height="40px"> -->
+<h1 align="center"> <img src="https://github.com/dheerajkotwani/dheerajkotwani/blob/master/hello.gif" alt="hello-gif"> <br >I'm <a href="https://www.linkedin.com/in/muhammad-uzair-baig-3b976a1a7/">Uzair Asad Baig</a>👨‍💻</h1>
 <!-- # Uzair Asad Baig 👨‍💻 -->
 
-[![Linkedin Badge](https://img.shields.io/badge/NumanAnees-30302f?style=flat&logo=linkedin)](https://www.linkedin.com/in/numananees/)
-[![Gmail Badge](https://img.shields.io/badge/numananees44@gmail.com-30302f?style=flat&logo=Gmail&logoColor=white)](mailto:numananees44@gmail.com)
-![Profile views](https://komarev.com/ghpvc/?username=NumanAnees&label=PROFILE+VIEWS&style=plastic&color=blue)
+[![Linkedin Badge](https://img.shields.io/badge/UzairAsadBaig-30302f?style=flat&logo=linkedin)](https://www.linkedin.com/in/muhammad-uzair-baig-3b976a1a7/)
+[![Gmail Badge](https://img.shields.io/badge/uzairasad26@gmail.com-30302f?style=flat&logo=Gmail&logoColor=white)](mailto:uzairasad26@gmail.com)
+![Profile views](https://komarev.com/ghpvc/?username=UzairAsadBaig&label=PROFILE+VIEWS&style=plastic&color=blue)
 
 
 ## Hi there 👋,           
@@ -15,7 +15,7 @@
 ## 🧐 About
 ☯ I'm a **Developer | Thinker | Creator | Learner**
 - 🌱 Learning new things everyday.
-- 👨‍💻 FullStack developer who loves web development.
+- 👨‍💻 FullStack developer who loves software development.
 - 😄 I usually like to make open source contributions.
 - 🌱 I love to learn new Technologies and ready to help others.
 - 👯 And Many More...
@@ -25,19 +25,18 @@
 
 
 - 💬 Ask me about anything and everything! 
-- 📫 How to reach me: https://numananees.netlify.app/
 - ⚡ Fun fact: I usually like coding at nights! 
 
-<a href="https://NumanAnees.github.io">
-  <img src="https://github-readme-stats.vercel.app/api?username=NumanAnees&theme=radical&count_private=true" align="center"/>
+<a href="https://UzairAsadBaig.github.io">
+  <img src="https://github-readme-stats.vercel.app/api?username=UzairAsadBaig&theme=radical&count_private=true" align="center"/>
 </a>
-<a href="https://NumanAnees.github.io">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=NumanAnees&theme=radical&layout=compact" align="center"/>
+<a href="https://UzairAsadBaig.github.io">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=UzairAsadBaig&theme=radical&layout=compact" align="center"/>
 </a>
 <p align="center"> 
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=NumanAnees&show_icons=true" alt="NumanAnees_stats" /> 
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NumanAnees&layout=compact" alt="NumanAnees_stats" />
-  <img src="http://github-readme-streak-stats.herokuapp.com?user=NumanAnees&layout=compact" alt ="yash0501" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=UzairAsadBaig&show_icons=true" alt="UzairAsadBaig_stats" /> 
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=UzairAsadBaig&layout=compact" alt="UzairAsadBaig_stats" />
+  <img src="http://github-readme-streak-stats.herokuapp.com?user=UzairAsadBaig&layout=compact" alt ="yash0501" />
 </p>
 
 <br>
