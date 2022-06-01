@@ -1,0 +1,226 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+//Struct for Donor:
+struct Donor
+{
+	string name;
+	string rollNo;
+	string bGroup;
+	string date;
+	long long int phoneNo;
+
+	//To Get Donors Data:
+	void getDonorData()
+	{
+		cout << "Enter Donor's Name: ";
+		cin >> name;
+		cin.ignore();
+
+		cout << "Enter Donor's Roll No.: ";
+		cin >> rollNo;
+		cin.ignore();
+
+		cout << "Enter Donor's Blood Group: ";
+		cin >> bGroup;
+		cin.ignore();
+
+		cout << "Enter Donor's Phone No: ";
+		cin >> phoneNo;
+		cin.ignore();
+
+		cout << "Enter Donor's Date Donation/Addtion: ";
+		cin >> date;
+	}
+
+	
+
+};
+
+//Functions:
+// 1:
+//Adding Donor's Record:
+void AddDonorRecord()
+{
+	Donor donor[5]; 
+	fstream file;
+
+	file.open("bds_donor_data.txt", ios::out);
+	cout << "\nWriting Donor's Data to The File." << endl;
+	
+     for (int i = 0; i < 5; i++)
+	{
+		cout << "Enter Donor's Data " << i + 1 << " : " << endl;
+		donor[i].getDonorData();
+		cout << endl;
+
+		//Writing Donor Data To The File
+		file.write((char*)&donor[i], sizeof(donor[i]));
+	}
+
+	file.close(); 
+}
+
+//2:
+//To Search Donor By Name:
+void searchRecordByName()
+{
+	Donor donor;
+	string name;
+	cout << "Enter Name:\n";
+	cin >> name;
+	
+
+	ifstream file;
+	file.open("bds_donor_data.txt", ios::in);
+	if (!file)
+	{
+		cout << " File is not Found ";
+	}
+	else
+	{
+		if(name==donor.name)
+		file.read((char*)(&name), sizeof(donor));
+		cout << "Name " << donor.name;
+		cout << "Donors ID: " << donor.rollNo << endl;
+		cout << "Donors Blood Group: " << donor.bGroup << endl;
+		cout << "Donors Adding/Blood Donation Date: " << donor.date << endl;
+		cout << "Donors Phone Number: " << donor.phoneNo << endl;
+	}
+	file.close();
+}
+
+//3.
+//To Search Donors List Based On Blood Group:
+void searchBloodList()
+{
+	string bloodG;
+	Donor donor;
+
+	ifstream file("bds_donor_data.txt");
+
+	if (!file)
+	{
+		cout << "File Error!" << endl;
+	}
+
+	else
+	{
+		cout << "Enter Blood Group that's Needed: ";
+		cin >> bloodG;
+
+		cout << "******Data of Searched Donor List Of Donors By Blood******" << endl;
+		while (!file.eof())
+		{
+			file.read((char*)&donor.bGroup, sizeof(Donor));
+			if (donor.bGroup == bloodG)
+			{
+				
+				cout << "Donors Name: " << donor.name << endl;
+				cout << "Donors ID: " << donor.rollNo << endl;
+				cout << "Donors Blood Group: " << donor.bGroup << endl;
+				cout << "Donors Adding/Blood Donation Date: " << donor.date << endl;
+				cout << "Donors Phone Number: " << donor.phoneNo << endl;
+			}
+		}
+
+
+	}
+
+	file.close();
+}
+
+//To Update Donor Record After Successfull Donation:
+void UpdateDonorRecord()
+{
+	string dname;
+	Donor donor;
+
+	fstream file;
+
+		file.open("bds_donor_data.txt", ios::ate | ios::in | ios::out);
+		file.seekg(0);
+
+		file.read((char*)(&donor), sizeof(Donor));
+		int count = 0;
+		while (!file.eof())
+		{
+			cout << "Enter Date When Blood Donated Of" << dname << endl;
+			cin >> donor.date;
+			count++;
+			cout << "No. of Times Blood Given By " << dname << count;
+
+			//Updating In File:
+			file.write((char*)(&donor), sizeof(Donor));
+			file.read((char*)(&donor), sizeof(Donor));
+		}
+	}
+
+void removeDonorRecord()
+{
+	string dname;
+	cout << "Enter Name Whose Record Want To Remove: " << endl;
+	cin >> dname;
+
+	Donor donor;
+
+	fstream file;
+	file.open("bds_donor_data.dat", ios::in);
+
+	if (!file)
+	{
+		cout << "File Error!"<<endl;
+	}
+
+	else
+	{
+		file.open("temp.txt", ios::out);
+
+		file.read((char*)(&donor), sizeof(Donor));
+
+		while (!file.eof())
+		{
+			file.write((char*)(&donor), sizeof(Donor));
+			file.read((char*)(&donor), sizeof(Donor));
+		}
+
+		file.close();
+
+		remove("bds_donor_data.txt"); // Deleting File
+		rename("temp.txt", "bds_donor_data.txt"); //Renaming Temp File to Donor Records File
+	}
+}
+
+
+
+
+int main()
+{
+	cout << "**********FCIT BLOOD DONATION SOCIETY***********" << endl;
+	cout << "**********We Are Here To Save Lives.************" << endl;
+	cout << endl<<endl;
+
+	cout << "******Adding Donors Data*******" << endl;
+	AddDonorRecord();
+	cout << endl<< endl;
+
+	cout << "*****Searching Donor By Name******" << endl;
+	
+	searchRecordByName();
+	cout << endl << endl;
+
+	cout << "***** Searching Donor By Blood Group 'For Blood Group List' ******" << endl;
+	searchBloodList();
+	cout << endl << endl;
+
+	cout << "***** Record Updation After Blood Giving ******" << endl;
+	UpdateDonorRecord();
+	cout << endl << endl;
+
+	cout << "***** Record Removal Due To Medical Reason ******" << endl;
+	removeDonorRecord();
+
+	return 0;
+}
